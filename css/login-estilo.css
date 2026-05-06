@@ -1,0 +1,74 @@
+/* Fondo con imagen profesional */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../imagenes/bibi.jpg'); /* Cambia el nombre si usas otra imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cuadro de login */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 26px;
+}
+
+/* Etiquetas e inputs */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #3498db;
+    outline: none;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}

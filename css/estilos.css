@@ -1,0 +1,103 @@
+/* Fondo y estructura */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../imagenes/biblio.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.contenedor_registro {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+/* Contenedor de inputs */
+.input_container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input_item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Título */
+h2,
+.titulo-registro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.obligatorio {
+    font-size: 16px;
+    font-weight: normal;
+    color: red;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes */
+.ayuda {
+    font-size: 0.9em;
+    height: 18px;
+    transition: all 0.2s ease;
+    color: #007bff;
+}
+
+.ayuda.rojo {
+    color: red !important;
+    font-weight: bold;
+}
+
+.error {
+    color: red !important;
+    font-size: 13px;
+    margin-top: 3px;
+}

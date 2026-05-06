@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar Contraseña - Lector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #006d77, #83c5be);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #006d77;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #006d77;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 109, 119, 0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #006d77;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #004f56;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Botón Devolver elegante */
+    .devolver {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background: linear-gradient(135deg, #ececec, #d6d6d6);
+      border-radius: 30px;
+      color: #333;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #bbb;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .devolver:hover {
+      background: linear-gradient(135deg, #d6d6d6, #bfbfbf);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transform: translateY(-2px);
+    }
+    .devolver span {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cambiar Contraseña - Lector</h2>
+    <form action="cambio_contraseña.php" method="POST">
+      <label for="nueva">Nueva Contraseña</label>
+      <input type="password" id="nueva" name="pass1" required>
+
+      <label for="confirmar">Confirmar Contraseña</label>
+      <input type="password" id="confirmar" name="pass2" required>
+
+      <button type="submit">Actualizar Contraseña</button>
+    </form>
+
+    <!-- Botón Devolver elegante -->
+    <a href="http://localhost/biblioteca/lector/" class="devolver">
+      <span>⬅</span> Devolver
+    </a>
+
+    <p>Asegúrate de que ambas contraseñas coincidan.</p>
+  </div>
+</body>
+</html>

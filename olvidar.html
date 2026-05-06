@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar Contraseña Bibliotecario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2c7a7b, #285e61);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .contenedor {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .contenedor h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c7a7b;
+    }
+    .campo {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .campo label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+    .campo input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #2c7a7b;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-bottom: 20px;
+    }
+    .btn:hover {
+      background: #285e61;
+      transform: scale(1.02);
+    }
+    .mensaje {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    /* Botón Devolver elegante */
+    .devolver {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #ececec, #d6d6d6);
+      border-radius: 30px;
+      color: #333;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #bbb;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .devolver:hover {
+      background: linear-gradient(135deg, #d6d6d6, #bfbfbf);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transform: translateY(-2px);
+    }
+    .devolver span {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Cambiar Contraseña Bibliotecario</h2>
+    <form action="cambio_contraseña.php" method="POST">
+      <div class="campo">
+        <label for="nueva">Nueva Contraseña</label>
+        <input type="password" id="nueva" name="pass1" required>
+      </div>
+      <div class="campo">
+        <label for="confirmar">Confirmar Contraseña</label>
+        <input type="password" id="confirmar" name="pass2" required>
+      </div>
+      <button type="submit" class="btn">Actualizar Contraseña</button>
+    </form>
+
+    <!-- Botón Devolver elegante -->
+    <a href="http://localhost/biblioteca/biblioteca_inicio/" class="devolver">
+      <span>⬅</span> Devolver
+    </a>
+
+    <p class="mensaje">Asegúrate de que ambas contraseñas coincidan.</p>
+  </div>
+</body>
+</html>

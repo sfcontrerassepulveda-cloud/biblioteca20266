@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($res_update) {
         echo "<p style='color:green; text-align:center;'>✅ Datos actualizados correctamente.</p>";
-        header("Location:http://localhost/biblioteca/lector/");
+        header("./lector/");
     } else {
         echo "<p style='color:red; text-align:center;'>❌ Error al actualizar los datos.</p>";
     }

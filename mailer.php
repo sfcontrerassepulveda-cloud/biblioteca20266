@@ -27,7 +27,7 @@ if (pg_num_rows($resultado) == 0) {
     $query = "INSERT INTO recuperar_pass(correo, token, expira) VALUES ($1, $2, $3)";
     pg_query_params($conexion, $query, array($correo, $token, $expira));
 
-    $link = "http://localhost/biblioteca/restablecer_password.php?token=$token";
+    $link = "./restablecer_password.php?token=$token";
 
     $mail = new PHPMailer(true);
 

@@ -133,6 +133,6 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
   </table>
 
-  <a href="http://localhost/biblioteca/lector/" class="btn">⬅️ Regresar</a>
+  <a href="./lector/" class="btn">⬅️ Regresar</a>
 </body>
 </html>

@@ -127,7 +127,7 @@ $resultado = pg_query_params($conexion, $sql, array($idUsuario, $hoy));
     <?php } ?>
 
     <!-- Botón regresar -->
-    <a href="http://localhost/biblioteca/lector/" class="btn-regresar">⬅️ Regresar</a>
+    <a href="./lector/" class="btn-regresar">⬅️ Regresar</a>
   </div>
 </body>
 </html>

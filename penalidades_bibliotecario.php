@@ -119,7 +119,7 @@ $consulta = pg_query($conexion, "
       }
       ?>
     </table>
-    <a href='http://localhost/biblioteca/biblioteca_inicio/' class='btn-regresar'><i class='bi bi-arrow-left'></i> Regresar</a>
+    <a href='./' class='btn-regresar'><i class='bi bi-arrow-left'></i> Regresar</a>
   </div>
 </body>
 </html>

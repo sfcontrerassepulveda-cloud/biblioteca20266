@@ -89,7 +89,7 @@ pg_query($conexion, "UPDATE libros SET estado = 'reservado' WHERE id_libro = $id
 echo "<div style='background:#e6ffe6; border:2px solid green; border-radius:15px; width:70%; margin:50px auto; padding:25px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.2); border-radius:20px;'>
         <h2 style='color:green;'>✅ Reserva activa registrada con éxito.</h2>
         <p style='font-size:16px; color:#333;'>Recuerda que dispones de un día, a partir de la fecha, para realizar el préstamo dentro del horario de atención de la biblioteca .<br>
-      <a href='http://localhost/biblioteca/lector/' style='display:inline-block; margin-top:20px; padding:12px 25px; background:#4CAF50; color:white; text-decoration:none; font-weight:bold; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.2); transition:0.3s;'>📚 Devolver</a>
+      <a href='./lector/' style='display:inline-block; margin-top:20px; padding:12px 25px; background:#4CAF50; color:white; text-decoration:none; font-weight:bold; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.2); transition:0.3s;'>📚 Devolver</a>
       </div>";
 
 

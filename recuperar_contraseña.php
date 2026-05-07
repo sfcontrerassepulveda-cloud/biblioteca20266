@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($correo === $correo_usuario) {
         // Generar enlace con token simple
         $token = bin2hex(random_bytes(8)); // token aleatorio
-        $enlace = "http://localhost/biblioteca/restablecer.php?token=" . $token;
+        $enlace = "./restablecer.php?token=" . $token;
 
         // Enviar correo
         $asunto = "Recuperación de contraseña - Biblioteca";

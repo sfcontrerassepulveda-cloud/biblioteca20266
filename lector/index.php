@@ -223,19 +223,19 @@ $nombreLector = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : "Lector";
         <div class="dropdown" id="userMenu">
           <a href="../actualizar_mis_datos.php">✏️ Actualizar datos</a>
           <a href="../actualizar_lector.html">🔑 Actualizar contraseña</a>
-          <a href="http://localhost/biblioteca/logout.php">🚪 Cerrar sesión</a>
+          <a href="../logout.php">🚪 Cerrar sesión</a>
         </div>
       </div>
     </div>
 
     <!-- Cards -->
     <div class="cards">
-      <div class="card" onclick="window.location.href='http://localhost/biblioteca/ver_libros.php'">
+      <div class="card" onclick="window.location.href='../ver_libros.php'">
         <div class="card-img-usuario"></div>
         <h3>Libros</h3>
       </div>
 
-      <div class="card" onclick="window.location.href='http://localhost/biblioteca/penalidades.php'">
+      <div class="card" onclick="window.location.href='../penalidades.php'">
         <div class="card-img-penalidades"></div>
         <h3>Penalidades</h3>
       </div>
@@ -245,7 +245,7 @@ $nombreLector = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : "Lector";
         <h3>Reservas</h3>
       </div>
 
-      <div class="card" onclick="window.location.href='http://localhost/biblioteca/prestamos.php'">
+      <div class="card" onclick="window.location.href='../prestamos.php'">
         <div class="card-img-prestamos"></div>
         <h3>Préstamos</h3>
       </div>

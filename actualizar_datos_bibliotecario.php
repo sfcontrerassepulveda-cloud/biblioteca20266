@@ -120,7 +120,7 @@ $usuario = pg_fetch_assoc($resultado)
 
       <button type="submit" class="btn">💾 Guardar cambios</button>
     </form>
-    <a href=http://localhost/biblioteca/biblioteca_inicio/ class="back">← Volver al inicio</a>
+    <a href="./" class="back">← Volver al inicio</a>
   </div>
 </body>
 </html>

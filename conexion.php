@@ -1,11 +1,11 @@
 <?php
-$host = "localhost";
-$dbname = "biblioteca2025";
+$host = "trolley.proxy.rlwy.net";
+$dbname = "railway";
 $user = "postgres";
-$password = "1234"; // Cambia esto si tu contraseña es diferente
+$password = "TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW"; // Cambia esto si tu contraseña es diferente
 
 try {
-    $conexion = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+    $conexion = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password,sslmode=require);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "Error al conectar con la base de datos: " . $e->getMessage();

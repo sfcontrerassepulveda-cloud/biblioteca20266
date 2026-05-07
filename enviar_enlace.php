@@ -1,5 +1,5 @@
 <?php
-$conexion = pg_connect("host=localhost dbname=biblioteca2025 user=postgres password=1234");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 $correo = $_POST['correo'];
 $token = bin2hex(random_bytes(32));

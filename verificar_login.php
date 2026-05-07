@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-$conexion = pg_connect("host=localhost dbname=biblioteca2025 user=postgres password=1234");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@postgres.railway.internal:5432/railway");
 if (!$conexion) {
     die("Error al conectar a la base de datos.");
 }

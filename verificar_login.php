@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@postgres.railway.internal:5432/railway");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@postgres.railway.internal:16774./railway");
 if (!$conexion) {
     die("Error al conectar a la base de datos.");
 }

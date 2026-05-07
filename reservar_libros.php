@@ -7,7 +7,7 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'lector') {
     exit;
 }
 
-$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@postgres.railway.internal:5432/railway");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 if (!$conexion) {
     die("Error al conectar a la base de datos.");
 }

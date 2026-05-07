@@ -16,7 +16,7 @@ $id_prestamo = (int)$_POST['id_prestamo'];
 // 🔹 Capturar observación desde el formulario
 $observacion = isset($_POST['observacion']) ? $_POST['observacion'] : null;
 
-$conexion = pg_connect("host=localhost dbname=biblioteca2025 user=postgres password=1234");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 // Obtener detalles del préstamo y usuario
 $res = pg_query($conexion, "

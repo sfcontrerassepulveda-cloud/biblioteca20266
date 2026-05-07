@@ -9,7 +9,7 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'bibliotecario') {
 $id_reserva = $_POST['id_reserva'];
 $id_libro = $_POST['id_libro'];
 
-$conexion = pg_connect("host=localhost dbname=biblioteca2025 user=postgres password=1234");
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 if (!$conexion) {
     die("Error de conexión.");

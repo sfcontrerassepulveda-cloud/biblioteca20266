@@ -3,8 +3,8 @@ session_start();
 
 // Si no hay sesión, redirigir al login
 if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'bibliotecario') {
-    header("Location: login.php");
-    exit;
+    header("Location: /login.php");
+    exit();
 }
 
 // Nombre del bibliotecario guardado en sesión
@@ -108,8 +108,8 @@ $nombrebibliotecario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : "Bibli
       <div class="user-profile">
         <button onclick="toggleDropdown()">👤 <?php echo htmlspecialchars($nombrebibliotecario);?></button>
         <div id="dropdownMenu" class="dropdown">
-          <a href="http://localhost/biblioteca/logout.php">🚪 Cerrar sesión</a>
-          <a href="http://localhost/biblioteca/actualizar_datos_bibliotecario.php">⚙️ Actualizar datos</a>
+          <a href="../logout.php">🚪 Cerrar sesión</a>
+          <a href="../actualizar_datos_bibliotecario.php">⚙️ Actualizar datos</a>
           <a href="../olvidar.html">🔑 Actualizar contraseña</a>
         </div>
       </div>
@@ -118,30 +118,30 @@ $nombrebibliotecario = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : "Bibli
     <section class="dashboard">
       <div class="cards-wrap">
         <!-- Fila 1 -->
-        <div class="card" onclick="window.location.href='http://localhost/biblioteca/admin_usuarios.php'">
+        <div class="card" onclick="window.location.href='../admin_usuarios.php'">
           <div class="card-img-usuario"></div>
           <p>Usuarios</p>
         </div>
 
-        <a class="card-link" href="http://localhost/biblioteca/registrar_libro.php">
+        <a class="card-link" href="../registrar_libro.php">
           <div class="card">
             <div class="card-img-libro"></div>
             <p>Libros</p>
           </div>
         </a>
 
-        <div class="card" onclick="window.location.href='/biblioteca/panel_prestamo.php'">
+        <div class="card" onclick="window.location.href='../panel_prestamo.php'">
           <div class="card-img-prestamos"></div>
           <p>Préstamos</p>
         </div>
 
         <!-- Fila 2 -->
-        <div class="card" onclick="window.location.href='http://localhost/biblioteca/penalidades_bibliotecario.php'">
+        <div class="card" onclick="window.location.href='../penalidades_bibliotecario.php'">
           <div class="card-img-penalidades"></div>
           <p>Penalidades</p>
         </div>
 
-        <a class="card-link" href="http://localhost/biblioteca/panel_reservas.php">
+        <a class="card-link" href="../panel_reservas.php">
           <div class="card">
             <div class="card-img-reservas"></div>
             <p>Reservas</p>

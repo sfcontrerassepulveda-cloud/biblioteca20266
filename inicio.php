@@ -169,7 +169,7 @@ $nombre = $_SESSION['nombre'] ?? "Usuario";
     <div class="btns">
       <a class="boton" href="logout.php">Cerrar sesión</a> 
       <?php if ($tipo_usuario == 'bibliotecario'): ?>
-        <button onclick="window.location.href='./'">Bibliotecario</button>
+        <button onclick="window.location.href='./biblioteca_inicio/'">Bibliotecario</button>
       <?php elseif ($tipo_usuario == 'lector'): ?>
         <button onclick="window.location.href='./lector/'">Lector</button>
       <?php endif; ?>

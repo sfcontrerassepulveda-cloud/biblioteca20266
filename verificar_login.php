@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['nombre'] = $usuario['nombre'];
             $_SESSION['correo'] = $usuario['correo'];
             $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
-            header("Location: inicio.php");
-            exit;
+            header("Location: /inicio.php");
+            exit();
         } else {
             // Mostrar cuadro de error de contraseña
             $mensaje = "Contraseña incorrecta.";

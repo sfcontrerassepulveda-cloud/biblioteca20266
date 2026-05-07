@@ -1,15 +1,8 @@
 <?php
 session_start();
 
-// Datos de conexión
-$host = "localhost";
-$usuario = "postgres";
-$clave = "1234";
-$bd = "biblioteca2025";
-$puerto = "5432";
-
 // Conexión con PostgreSQL
-$conn = pg_connect("host=$host port=$puerto dbname=$bd user=$usuario password=$clave");
+$conn = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 if (!$conn) {
     die("Error de conexión: " . pg_last_error());
 }

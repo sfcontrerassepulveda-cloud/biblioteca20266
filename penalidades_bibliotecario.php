@@ -11,6 +11,8 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'bibliotecario') {
 $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 if (!$conexion) {
     die("Error en la conexión a la base de datos.");
+}else {
+    pg_query($conexion, "SET TIME ZONE 'America/Bogota'");
 }
 
 // 📊 Consulta penalidades activas (basado en fechas)

@@ -199,7 +199,7 @@ $reservas = pg_query($conexion, $query);
         <?php } ?>
     </table>
     <div class="volver">
-        <a href="./">Volver al inicio</a>
+        <a href="./biblioteca_inicio">Volver al inicio</a>
     </div>
 </div>
 

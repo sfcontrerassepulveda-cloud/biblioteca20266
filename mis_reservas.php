@@ -11,6 +11,8 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'lector') {
 $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 if (!$conexion) {
     die("Error al conectar a la base de datos.");
+}}else {
+    pg_query($conexion, "SET TIME ZONE 'America/Bogota'");
 }
 
 $id_lector = $_SESSION['id'];

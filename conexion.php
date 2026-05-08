@@ -1,11 +1,9 @@
 <?php
-$host = "trolley.proxy.rlwy.net";
-$dbname = "railway";
-$user = "postgres";
-$password = "TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW"; // Cambia esto si tu contraseña es diferente
-
+$dsn = "pgsql:host=trolley.proxy.rlwy.net;port=16774;dbname=railway";
+    $usuario = "postgres";
+    $password = "TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW";
 try {
- $conexion = new PDO("pgsql:host=$host;dbname=$dbname; sslmode=require", $user, $password);
+$conexion = new PDO($dsn, $usuario, $password);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "Error al conectar con la base de datos: " . $e->getMessage();

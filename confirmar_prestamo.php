@@ -13,6 +13,8 @@ $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@t
 
 if (!$conexion) {
     die("Error de conexión.");
+}else {
+    pg_query($conexion, "SET TIME ZONE 'America/Bogota'");
 }
 
 // Obtener el ID del usuario que hizo la reserva

@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+date_default_timezone_set('America/Bogota');
 // Verificar que el usuario esté logueado y sea lector
 if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'lector') {
     echo "Acceso denegado.";

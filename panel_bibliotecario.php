@@ -143,7 +143,7 @@ $resultado = pg_query($conexion, $query);
         </table>
 
         <br>
-        <a href="inicio.php"><button class="btn-volver">Volver al inicio</button></a>
+        <a href="./inicio.php"><button class="btn-volver">Volver al inicio</button></a>
     </div>
 </body>
 </html>

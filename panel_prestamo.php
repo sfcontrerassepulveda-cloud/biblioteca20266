@@ -190,7 +190,7 @@ $resultado = pg_query($conexion, $query);
        
         </table>
 
-        <a href="./" class="btn-volver">Volver al inicio</a>
+        <a href="./biblioteca_inicio" class="btn-volver">Volver al inicio</a>
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "conexion.php"; // Aquí $conexion es un PDO
-
+//require_once "conexion.php"; // Aquí $conexion es un PDO
+$conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 // Verificar sesión
 if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'lector') {
     header("Location: login.php");

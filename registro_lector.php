@@ -55,22 +55,7 @@
                 <div class="input_item">
                     <label for="identificacion">Número de Identificación:</label>
                     <input type="text" name="identificacion" id="identificacion" required data-ayuda="Solo números, mínimo 10 dígitos.">
-                   <?php  session_start();
-                    if(isset($_SESSION['mensaje_identificacion'])){
-                       echo '<p id="error_id" style="color:red">'.$_SESSION['mensaje_identificacion'].'</p>';
-
-                        unset($_SESSION['mensaje_identificacion']);
-                    }
-                    ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registro lector</title>
-</head>
-<body>
-
-<?php
+              <?php
 if(isset($_SESSION['mensaje_identificacion'])){
     echo '<p id="error_id" style="color:red">'
         . $_SESSION['mensaje_identificacion'] .
@@ -79,9 +64,6 @@ if(isset($_SESSION['mensaje_identificacion'])){
     unset($_SESSION['mensaje_identificacion']);
 }
 ?>
-
-</body>
-</html>
                     <div class="ayuda"></div>
                    
                 </div>

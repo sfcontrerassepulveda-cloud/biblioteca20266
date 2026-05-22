@@ -202,7 +202,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
             <p class="mensaje">Ingrese una identificación en el buscador para ver resultados.</p>
         <?php endif; ?>
 
-        <a href="./" class="btn-volver">← Volver al inicio</a>
+        <a href="./biblioteca_inicio/" class="btn-volver">← Volver al inicio</a>
     </div>
 </body>
 </html>

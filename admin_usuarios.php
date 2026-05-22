@@ -1,5 +1,6 @@
 <?php
 // Conexión a la base de datos
+
 $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 if (!$conexion) {
@@ -132,6 +133,14 @@ if (!empty($_GET['buscar'])) {
             color: #666;
             font-style: italic;
         }
+        .acciones-botones{
+    display: flex;
+    gap: 5px; /* separación entre botones */
+    align-items: center;
+}
+.acciones-botones a{
+    margin-right: 10px;
+}
     </style>
 </head>
 <body>
@@ -166,13 +175,20 @@ if (!empty($_GET['buscar'])) {
                         <td><?= htmlspecialchars($fila['telefono']) ?></td>
                         <td><?= $fila['estado'] ?></td>
                         <td>
-                            <?php if ($fila['estado'] === 'inactivo'): ?>
-                                <a href="?id=<?= $fila['id'] ?>&accion=activar" class="btn-activar">Activar</a>
-                            <?php else: ?>
-                                <a href="?id=<?= $fila['id'] ?>&accion=desactivar" class="btn-desactivar">Desactivar</a>
-                            <?php endif; ?>
-                            <a href="?id=<?= $fila['id'] ?>&accion=eliminar" class="btn-eliminar" onclick="return confirm('¿Seguro que quieres eliminar este usuario?')">Eliminar</a>
-                        </td>
+    <div class="acciones-botones">
+        <?php if ($fila['estado'] === 'inactivo'): ?>
+            <a href="?id=<?= $fila['id'] ?>&accion=activar" class="btn-activar">Activar</a>
+        <?php else: ?>
+            <a href="?id=<?= $fila['id'] ?>&accion=desactivar" class="btn-desactivar">Desactivar</a>
+        <?php endif; ?>
+
+        <a href="?id=<?= $fila['id'] ?>&accion=eliminar"
+           class="btn-eliminar"
+           onclick="return confirm('¿Seguro que quieres eliminar este usuario?')">
+           Eliminar
+        </a>
+    </div>
+</td>
                     </tr>
                 <?php endwhile; ?>
             </table>

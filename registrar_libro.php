@@ -287,7 +287,7 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'bibliotecario') {
             <input type="submit" value="Guardar Libro">
         </form>
 
-        <p><a href="./">Volver al inicio</a></p>
+        <p><a href="./biblioteca_inicio/">Volver al inicio</a></p>
         <p><a href="./ver_libros.php">Ver lista de libros</a></p>
         <p><a href="./inventario.php">Ir a Inventarios</a></p>
     </div>

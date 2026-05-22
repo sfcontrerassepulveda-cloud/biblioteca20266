@@ -1,6 +1,5 @@
 <?php
 // Conexión a la base de datos
-
 $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 if (!$conexion) {
@@ -55,16 +54,20 @@ if (!empty($_GET['buscar'])) {
             padding: 40px;
         }
         .contenedor {
-            background-color: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 30px;
             border-radius: 15px;
-            max-width: 900px;
+            max-width: 1500px;
             margin: auto;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         h2 {
             text-align: center;
-            color: #333;
+            color: #111; 
+            font-weight: bold;
             margin-bottom: 20px;
         }
         table {
@@ -135,6 +138,7 @@ if (!empty($_GET['buscar'])) {
         }
         .acciones-botones{
     display: flex;
+    justify-content: center;
     gap: 5px; /* separación entre botones */
     align-items: center;
 }

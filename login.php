@@ -20,11 +20,59 @@
         .olvide-contrasena a:hover {
             text-decoration: underline;
         }
+        .titulo-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-regresar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    /* background: #2563eb; */
+    color: black;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-regresar:hover{
+    background: gray;
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.btn-regresar svg{
+    width: 24px;
+    height: 24px;
+}
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h1>Inicio de Sesión</h1>
+       <div class="titulo-contenedor">
+    <a href="./" class="btn-regresar">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             width="22" 
+             height="22" 
+             fill="none" 
+             viewBox="0 0 24 24" 
+             stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M15 19l-7-7 7-7"/>
+        </svg>
+    </a>
+
+    <h1>Inicio de Sesión</h1>
+</div>
         <form action="verificar_login.php" method="post" autocomplete="off">
             <label for="correo">Correo electrónico</label>
             <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>

@@ -9,9 +9,10 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo_usuario'] != 'bibliotecario') {
 $conexion = pg_connect("postgresql://postgres:TLlzVltHnMUWvkOawjQeRKjmQBGBnjzW@trolley.proxy.rlwy.net:16774/railway");
 
 if (!$conexion) {
-    die("Error al conectar con la base de datos.");
+    die("Error al conectar a la base de datos.");
+}else {
+    pg_query($conexion, "SET TIME ZONE 'America/Bogota'");
 }
-
 /* ============================================================
    1. Cancelar automáticamente reservas con más de 1 día
    ============================================================ */
